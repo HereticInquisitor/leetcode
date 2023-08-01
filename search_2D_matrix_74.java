@@ -9,7 +9,7 @@ class search_2D_matrix_74 {
             return false;
         
         if(binary(matrix[mid_r], target, 0, matrix[0].length-1))
-        return true
+        retur n true
 
         else if(matrix[mid_r][0]> target)
             return rows_binary(matrix, target, start_r, mid_r-1);
