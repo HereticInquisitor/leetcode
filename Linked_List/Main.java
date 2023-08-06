@@ -9,6 +9,8 @@ public class Main {
         list.insert(100,2);
         list.deleteFirst();
         list.deleteLast();
+        list.delete(1);
+        System.out.println(list.find(8));
         list.display();
     }
 }
