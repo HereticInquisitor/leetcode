@@ -1,24 +1,24 @@
 class Solution {
     public int strStr(String haystack, String needle) {
-        char c[] =haystack.toCharArray();
-        char ch[]= needle.toCharArray();
+        int lh=haystack.length();
+        int ln=needle.length();
         int j=0;
-        int v=0;
-        for(int i=0;i<haystack.length();i++) {
-            if(c[i] ==ch[j]) {
-                v++;
+        for(int i=0;i<lh;i++) {
+            if(haystack.charAt(i)== needle.charAt(j)) {
                 j++;
             }
             else {
+                i=i-j;
                 j=0;
             }
-            if(v== needle.length()) {
-                return i-needle.length()+1;
+            if(j== ln) {
+                return i-ln+1;
             }
         }
         return -1;  
     }
 }
+
 
 public class F_Occurence {
     public static void main(String args[]) {
